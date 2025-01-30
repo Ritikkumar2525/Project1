@@ -1,0 +1,31 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-rows: 60px 300px 50px;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-gap: 10px;
+}
+
+.header{
+    grid-area: header;
+    background-color: yellow;
+}
+
+.main-content{
+    grid-area: main;
+    background-color: violet;
+    padding: 50px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: blueviolet;
+    padding: 50px;
+}
+.footer{
+    grid-area: footer;
+    background-color: springgreen;
+    text-align: center;
+}

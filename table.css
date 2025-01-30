@@ -1,0 +1,45 @@
+body{
+    background-color: brown;
+
+}
+
+.table-container{
+    max-width: 600px;
+    background-color: aqua;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: yellow;
+    color: green;
+    
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid blue;
+}
+
+tr:hover{
+    background-color: chartreuse;
+}
+
+td:hover{
+    background-color: red;
+}
+
+th{
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+tfoot{
+    background-color: blueviolet;
+    color: white;
+}

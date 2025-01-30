@@ -1,0 +1,80 @@
+body{
+    background-color: blue;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card{
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+}
+
+.profile-card .profile-image img{
+    border-radius: 80px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid purple;
+    margin-left: 30%;
+}
+
+.profile-card .name{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 60px;
+    margin-top: 20px;
+
+}
+
+.profile-card .bio{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+
+.profile-card .social-profile{
+    margin-top: 15px;
+
+}
+
+.profile-card .social-profile .btn{
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.profile-card .social-profile .btn:hover{
+    background: blue;
+    transform: translateY(-3px);
+}
+
+.profile-card .social-profile .view-profile{
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+
+}
+.profile-card .social-profile .view-profile:hover{
+    background: blue;
+    transform: translateY(-3px);
+

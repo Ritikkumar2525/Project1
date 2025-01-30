@@ -1,0 +1,40 @@
+/* comments */
+/* Type of selectors in CSS */
+/* Universal selector */
+
+*{
+    background-color: rgb(0, 255, 242);
+}
+
+/* Element selector */
+
+h1{
+    color: red;
+}
+
+/* Class selector */
+.heading2{
+    color: violet;
+}
+
+/* Id selector */
+#heading3{
+    color: brown;
+}
+
+/* Group selector */
+a, p{
+    color: rgb(68, 0, 128);
+}
+
+/* attribute selector */
+input[type="email"]{
+    border: 1px solid green;
+    padding: 10px;
+}
+
+
+/* Psedo class selector */
+a:hover{
+    color: red;
+}
