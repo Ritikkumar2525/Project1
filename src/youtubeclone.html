@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-black transition duration-300">
+
+    <!-- Navbar -->
+    <nav class="bg-white flex justify-between items-center px-6 py-3 shadow-md fixed w-full top-0 z-50">
+        <!-- Left: Logo & Menu Button -->
+        <div class="flex items-center gap-3">
+            <button id="menuBtn" class="p-2 rounded-full hover:bg-gray-200 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <img class="w-24 cursor-pointer hover:scale-105 transition" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+        </div>
+
+        <!-- Center: Search Bar -->
+        <div class="hidden sm:flex flex-1 max-w-lg">
+            <input id="searchInput" type="text" class="w-full border border-gray-300 rounded-l-full px-4 py-2 outline-none focus:border-red-500 transition" placeholder="Search">
+            <button id="searchBtn" class="bg-gray-200 px-4 py-2 rounded-r-full hover:bg-gray-300 transition">🔍</button>
+        </div>
+
+        <!-- Right: Profile & Dark Mode -->
+        <div class="flex items-center gap-4">
+            <button id="darkModeBtn" class="p-2 rounded-full hover:bg-gray-200 transition">🌙</button>
+            <button class="p-2 rounded-full hover:bg-gray-200 transition">🔔</button>
+            <img class="w-10 h-10 rounded-full hover:scale-110 transition" src="https://via.placeholder.com/40" alt="User">
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed top-14 left-0 w-20 bg-white h-full shadow-md hidden md:flex flex-col items-center pt-5 transition-all duration-300">
+        <button class="flex flex-col items-center p-4 hover:bg-gray-100 transition transform hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21V3"/>
+            </svg>
+            <span class="text-xs">Home</span>
+        </button>
+        <button class="flex flex-col items-center p-4 hover:bg-gray-100 transition transform hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <span class="text-xs">Explore</span>
+        </button>
+        <button class="flex flex-col items-center p-4 hover:bg-gray-100 transition transform hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-2-2m0 0l-2 2m2-2v6"/>
+            </svg>
+            <span class="text-xs">Subscriptions</span>
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="md:ml-20 mt-16 p-4">
+        <h1 class="text-xl font-semibold mb-4">Recommended Videos</h1>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-white p-2 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                <img class="w-full rounded-lg" src="https://via.placeholder.com/300x170" alt="Thumbnail">
+                <div class="mt-2 flex gap-2">
+                    <img class="w-10 h-10 rounded-full hover:scale-110 transition" src="https://via.placeholder.com/40" alt="Channel">
+                    <div>
+                        <h2 class="font-bold text-sm">Video Title Here</h2>
+                        <p class="text-gray-500 text-xs">Channel Name</p>
+                        <p class="text-gray-500 text-xs">1M views • 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Sidebar Toggle
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("hidden");
+        });
+
+        // Dark Mode Toggle
+        const darkModeBtn = document.getElementById("darkModeBtn");
+        darkModeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("bg-gray-900");
+            document.body.classList.toggle("text-white");
+        });
+
+        // Search Bar Event
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+        searchBtn.addEventListener("click", () => {
+            alert("Searching for: " + searchInput.value);
+        });
+    </script>
+
+</body>
+</html>

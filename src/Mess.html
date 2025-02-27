@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Pass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+        .mess-pass {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+        }
+        .profile-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+        .details {
+            margin-left: 12px;
+            flex: 1;
+        }
+        .details p {
+            margin: 2px 0;
+            font-size: 14px;
+        }
+        .countdown {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            color: black;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 50%;
+        }
+        .meal-approved {
+            text-align: center;
+            color: green;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .approval-section {
+            border: 17px solid green;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            margin-top: 10px;
+            
+        }
+        .accepted-badge {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mess-pass">
+        <!-- Countdown Timer -->
+        <div id="countdown" class="countdown">30</div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="Vishnu.jpeg" alt="Profile" onerror="this.src='default-profile.png';" class="profile-image">
+            <div class="details">
+                <p class="text-lg font-bold">Breakfast</p>
+                <p class="text-gray-800 font-semibold">12321065</p>
+                <p class="text-gray-800">Ritik Kumar</p>
+                <p class="text-gray-800">Mess-2 BH-5</p>
+                <p class="text-sm font-semibold mt-1">P132: B.Tech. (Computer Science & Engineering) (2023)</p>
+            </div>
+        </div>
+
+        <!-- Date and Time -->
+        <div class="flex justify-between mt-4 text-gray-900 font-semibold">
+            <p>Feb 04, 2025</p>
+            <p>08:51 AM</p>
+        </div>
+
+        <!-- Meal Approved Section -->
+        <p class="meal-approved">Meal Approved</p>
+        <div class="approval-section">
+            <span class="accepted-badge">✅ ACCEPTED</span>
+        </div>
+    </div>
+
+    <script>
+        let countdown = 30;
+        const countdownElement = document.getElementById("countdown");
+
+        function startCountdown() {
+            const timer = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown === 1) {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        }
+
+        startCountdown();
+    </script>
+
+</body>
+</html>

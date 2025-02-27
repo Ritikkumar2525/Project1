@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-500 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Product Card -->
+    <div class="bg-gray-100 rounded-xl overflow-hidden w-full max-w-md shadow-xl transform transition duration-300 hover:scale-105">
+        
+        <!-- Image Section -->
+        <div class="relative group">
+            <img id="productImage" class="w-full h-72 object-cover cursor-pointer" 
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" 
+                alt="Shoes">
+            <button class="absolute bottom-4 right-4 bg-black text-white opacity-90 rounded-lg px-3 py-2 text-sm font-medium transition duration-300 hover:bg-gray-800 hover:scale-105 cursor-pointer">
+                Quick View
+            </button>
+        </div>
+
+        <!-- Product Info -->
+        <div class="p-6">
+            <h1 class="font-bold text-2xl text-gray-900">Nike Air Zoom Pegasus 39</h1>
+            <p class="text-gray-600 mt-1">Men's Road Running Shoes</p>
+
+            <!-- Price & Discount -->
+            <div class="flex items-center mt-3">
+                <span class="text-green-600 font-bold text-xl">$125</span>
+                <span class="text-gray-500 line-through ml-3">$150</span>
+                <span class="text-red-500 ml-3 text-sm">(20% OFF)</span>
+            </div>
+
+            <!-- Rating -->
+            <div class="flex items-center mt-4">
+                <span class="text-yellow-400 text-lg cursor-pointer">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                </span>
+                <span class="text-gray-600 text-sm ml-2">(4.0/5)</span>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="flex flex-wrap gap-3 justify-center mt-4">
+                <button class="bg-gray-200 text-gray-900 font-medium w-16 py-2 rounded-lg transition duration-300 hover:bg-gray-300 hover:scale-105 cursor-pointer">US 7</button>
+                <button class="bg-gray-200 text-gray-900 font-medium w-16 py-2 rounded-lg transition duration-300 hover:bg-gray-300 hover:scale-105 cursor-pointer">US 8</button>
+                <button class="bg-gray-200 text-gray-900 font-medium w-16 py-2 rounded-lg transition duration-300 hover:bg-gray-300 hover:scale-105 cursor-pointer">US 9</button>
+                <button class="bg-gray-200 text-gray-900 font-medium w-16 py-2 rounded-lg transition duration-300 hover:bg-gray-300 hover:scale-105 cursor-pointer">US 10</button>
+            </div>
+
+            <!-- Add to Cart Button with Cart Icon -->
+            <button class="bg-blue-600 text-white font-semibold w-full py-3 rounded-lg mt-6 flex items-center justify-center gap-2 transition duration-300 hover:bg-blue-700 hover:scale-105 cursor-pointer">
+                <!-- Cart Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l3.6 7.59M7 13h10l3-6H5.4M16 16a2 2 0 11-4 0 2 2 0 014 0zM9 16a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to Cart
+            </button>
+        </div>
+        
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+        <div class="relative">
+            <button id="closeModal" class="absolute top-2 right-4 text-white text-4xl font-bold cursor-pointer">&times;</button>
+            <img id="modalImage" class="max-w-full max-h-screen rounded-lg shadow-lg">
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal
+    <script>
+        const productImage = document.getElementById("productImage");
+        const imageModal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+
+        // Open the modal when the image is clicked
+        productImage.addEventListener("click", () => {
+            modalImage.src = productImage.src;
+            imageModal.classList.remove("hidden");
+        });
+
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener("click", () => {
+            imageModal.classList.add("hidden");
+        });
+
+        // Close the modal when clicking outside the image
+        imageModal.addEventListener("click", (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.add("hidden");
+            }
+        });
+    </script> -->
+
+</body>
+</html>

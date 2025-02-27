@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PopUp Boxes in Js</h1>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="PromptName()">Name Prompt</button>
+    <button onclick="ConfirmAct()">Confirm Action</button>
+    <p id="output"></p>
+    <p id="age"></p>
+
+    <script>
+        //alert prompt confirm
+        function showAlert(){
+            alert("Welcome to Javascript")
+        }
+
+        function PromptName(){
+            // alert("Welcome to Javascript")
+            let name = prompt("What is your name")
+            if(name!=null && name!==''){
+                document.getElementById('output').innerText = 'Hello, '+ name +'!';  // `$hello{name}`
+            }else{
+                document.getElementById('output').innerText = "You have not enter anything"
+            }
+        }
+
+
+        //confirm
+        function ConfirmAct(){
+            let response = confirm("are you sure? you want to proceed.")
+            if(response){
+                document.getElementById('output').innerText = "You choose to proceed."
+            }else{
+                document.getElementById('output').innerText = 'You choose to cancel.'
+            }
+        }
+
+
+        // Literals
+        let name = 'test'
+        document.getElementById('output').innerText = 'Hello, ' + name + ''
+        let age = 123
+        document.getElementById('age').innerText = 'you are ' + age + ' years old'
+
+        document.getElementById('output').innerText = `Hello, ${name}`
+
+    </script>
+</body>
+</html>
