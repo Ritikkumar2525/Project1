@@ -4,11 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <style>
+        .box{
+            height: 200px;
+            width: 300px;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
+    <h1>Js Events</h1>
+    <!-- Mouse Events -->
+    <div class="box" id="mouseBox"
+    onmousedown="mouseDown()"
+    onmouseup="mouseUp()"
+    onmousemove="mouseMove()"
+    onmouseover="mouseOver()"
+    onmouseout="mouseOut()"
+    onclick="mouseClick()">
+        Mouse Events in javascript
+    </div>
+
+    <div onclick="counting()">
+        <img src="Facebook-Logo.png" height="200px " width="300px" alt="">
+        <p>clicks <span id="cli">0</span></p>
+    </div>
+
     <script>
-        // Write javascript here.
+        let count = 0;
+        function counting(){
+            count++;
+            document.getElementById('cli').textContent = count;
+            console.log(`clicks, ${count}`);
+        }
+        function mouseDown(){
+            const box = document.getElementById('mouseBox');
+            box.style.color = 'red';
+        }
+
+        function mouseUp(){
+            const box = document.getElementById('mouseBox');
+            box.style.color = 'blue';
+        }
+        function mouseMove(){
+            const box = document.getElementById('mouseBox');
+            box.innerHTML = `Mouse X: ${event.clientX} Mouse Y: ${event.clientY}`;
+            box.style.backgroundColor = 'gray';
+        }
+        function mouseOver(){
+            document.getElementById('mouseBox').style.backgroundColor = 'green';
+        }
+
+        function mouseOut(){
+            document.getElementById('mouseBox').style.backgroundColor = 'purple';
+        }
     </script>
+
+
+
+
+
+    <!-- <script>
+        // Write javascript here.
+        //Object
+        let user = new Object(); // object constructor
+        let person = { //literal Object
+            name: "Ritik", //key value pair
+            age: 20
+        }
+        // get the property from object
+        alert(person.name)
+        alert(person.age)
+        // change, remove, add the property into the object
+        //add the property surname with value
+        //change the name property to your name
+        //remove the name property from object
+
+        let student = {
+            a:45000,
+            b:500,
+            c:400,
+            d:600
+        }
+        let sum = 0;
+        for(let key in student){
+            sum += student[key];
+        }
+        console.log(sum);
+    </script> -->
 </body>
 </html>

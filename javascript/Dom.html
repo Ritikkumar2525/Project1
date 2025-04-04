@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Introduction to DOM in javascript</h1>
+    <p id="para">Introduction to javascript</p>
+    <img id="myimage" src="Facebook-Logo.png" width="100" alt="">
+    <br>
+    <a href="https://www.google.com/" id="mylink">Visit Link</a>
+
+    
+
+
+    
+    <button onclick="changeHeading()">Change Heading</button>
+    <button onclick="changepara()">Change Paragraph</button>
+    <button onclick="changeimage()">Update Image</button>
+    <button onclick="Updatedlink()">Change Link</button>
+
+    <ul id="Itemlist">
+        <li>Product 1</li>
+        <li>Product 2</li>
+    </ul>
+    <button onclick="Addnewitem()">Add New Item</button>
+    <button onclick="Removeitem()">Remove Item</button>
+    <button></button>
+
+    <script>
+        function changeHeading(){
+            const heading = document.getElementById('heading')
+            heading.innerHTML = "Heading is Changed"
+            heading.style.color = "green"
+            heading.style.fontWeight = "bold"
+
+        }
+
+        function changepara(){
+            const heading = document.getElementById('para')
+            heading.innerHTML = "Paragraph is Changed"
+            heading.style.color = "red"
+            heading.style.fontWeight = "bold"
+        }
+
+        function changeimage(){
+            const img = document.getElementById('myimage')
+            img.src = "img1.jpeg"
+            img.style.border = "3px solid red"
+        }
+
+        function Updatedlink(){
+            const link = document.getElementById('mylink')
+            link.href = "https://www.facebook.com/"
+            link.innerHTML = "Go to Facebook"
+            link.style.color = 'green'
+        }
+
+        function Addnewitem(){
+            const ul = document.getElementById('Itemlist')
+            const newitem = document.createElement('li')
+            newitem.innerHTML = 'Product ' + (ul.children.length+1)
+            ul.appendChild(newitem)
+        }
+
+        function Removeitem(){
+            const ul = document.getElementById('Itemlist')
+            if(ul.children.length > 0)
+            ul.removeChild(ul.lastElementChild)
+            else
+            alert('No more items to delete')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <!-- <link rel="stylesheet" href="output.css"> -->
+
+</head>
+<body>
+    <div>
+        <h1 class="text-2xl font-bold">My To - Do List</h1>
+
+        <div>
+            <input type="text" placeholder="Enter Your Task" id="taskInput" class="border-amber-700 rounded">
+            <button id="AddTask" >Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById("taskInput")
+        const addTask = document.getElementById("AddTask")
+        const taskList = document.getElementById("taskList")
+
+        addTask.onclick = () => {
+            const task=taskInput.value.trim()
+            if(!task) return
+        }
+        // function addTask(){
+        //     const task = taskInput.value.trim();
+        //     if(!task) return
+        // }
+
+        const li 
+    </script>
+</body>
+</html>

@@ -4,64 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Example</title>
-    <link rel="stylesheet" href="tableExample.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <table border="1">
-            <thead>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-4">
+        <table>
+            <thead class="text-white">
                 <tr>
-                    <th rowspan="3">Day</th>
-                    <th colspan="3">Seminar</th>
+                    <th>Category</th>
+                    <th>Task</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
                 </tr>
-    
-    
-                <tr>
-                    <th colspan="2">Schedule</th>
-                    <th rowspan="3">Topic</th>
-                </tr>
-    
-                <tr>
-                    <th>Begin</th>
-                    <th>End</th>
-                </tr>
-                
             </thead>
             <tbody>
                 <tr>
-                    <td>Monday</td>
-                    <td>8:00 a.m.</td>
-                    <td>5:00 p.m.</td>
-                    <td style="text-align: center;">Introduction to XML</td>
+                    <td rowspan="3" class="bg-gray-500">Work</td>
+                    <td>Project Meeting</td>
+                    <td colspan="2" class="bg-gray-400">8 AM - 11 AM</td>
+                    <td class="bg-gray-400"></td>
+                    <td class="bg-gray-400"></td>
+                    <td class="bg-gray-400"></td>
+                </tr>
+                <tr>
+                    <td>Code Review</td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="3" class="bg-gray-400">1 PM - 3 PM</td>
+                </tr>
+                <tr>
+                    <td>Gym Session</td>
+                    <td class="bg-gray-400">6 PM</td>
+                    <td></td>
+                    <td class="bg-gray-400">6 PM</td>
+                    <td></td>
+                    <td class="bg-gray-400">6 PM</td>
+                </tr>
+
+                
+                <tr>
+                    <td rowspan="2" class="bg-gray-500">Personal</td>
+                    <td>Grocery Shopping</td>
+                    <td></td>
+                    <td colspan="2" class="bg-gray-400">4 PM - 5 PM</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Read Book</td>
+                    <td colspan="5">8 PM - 9 PM (Daily)</td>
                 </tr>
 
                 <tr>
-                    <td rowspan="3">Tuesday</td>
-                    <td>8:00 a.m.</td>
-                    <td>11:00 a.m.</td>
-                    <td style="text-align: center;">Validity: DTD and Relax NG</td>
+                    <td class="bg-gray-500">Mixed</td>
+                    <td>Team Lunch</td>
+                    <td colspan="3">12 PM - 1 PM</td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
-                <tr>
-                    <td>11:00 a.m.</td>
-                    <td>2:00 p.m.</td>
-                    <td style="text-align: center;">XPath</td>
+                
+                <tr class="font-bold bg-black text-white">
+                    <td colspan="2">Total Tasks</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>2</td>
                 </tr>
-
-                <tr>
-                    <td>2:00 p.m.</td>
-                    <td>5:00 p.m.</td>
-                    <td style="text-align: center;">XSL Transformation</td>
-                </tr>
-
-                <tr>
-                    <td>Wednesday</td>
-                    <td>8:00 a.m.</td>
-                    <td>12:00 p.m.</td>
-                    <td style="text-align: center;">XSL Formatting Objects</td>
-                </tr>
-
-
             </tbody>
         </table>
     </div>
